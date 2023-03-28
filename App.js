@@ -20,14 +20,18 @@ const Title2 = () => {
 
 //Component composition == Component inside another Component
 const Headings = () => (
-    <div id="container">
+// <React.Fragment> </React.Fragment> == <> </>
+    <React.Fragment> 
         <Title1 />
         <Title2 />
         <h1 className="headings">
             This is Heading from React functional component
         </h1>
-    </div>
+    </React.Fragment>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Headings />);
+
+const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+root2.render(<Headings />);
