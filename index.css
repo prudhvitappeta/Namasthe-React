@@ -1,3 +1,46 @@
-#parent {
-    color: green;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style: none;
+    padding: 5px;
+}
+
+.nav-items > ul > li {
+    padding: 15px;
+    font-size: 25px;
+}
+
+.body {
+    padding: 5px;
+}
+
+.res-card {
+    background-color: #f0f0f0;
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.res-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.res-logo {
+    width: 100%;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
 }
