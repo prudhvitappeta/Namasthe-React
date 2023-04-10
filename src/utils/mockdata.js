@@ -1,40 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-    return(
-        <div className="header-container">
-            <div className="logo-container">
-                <img className="logo" src="https://static.vecteezy.com/system/resources/previews/006/395/395/original/food-point-logo-symbol-and-icon-template-to-show-the-location-of-the-food-seller-vector.jpg"/>
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-};
-
-const RestaurantCard = (props) => {
-    const {resData} = props;
-    const {name, avgRating, cuisines, costForTwoString, deliveryTime, cloudinaryImageId} = resData?.data;
-
-    return(
-        <div className="res-card">
-            <img className="res-logo" src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId }/>
-            <h3>{name}</h3>
-            <h5>{cuisines.join(", ")}</h5>
-            <h5>{costForTwoString}</h5>
-            <h5>{avgRating} star</h5>
-            <h5>{deliveryTime}</h5>
-        </div>
-    );
-}
-const apiResData = [
+export const apiResData = [
     {
         "type": "restaurant",
         "data": {
@@ -1976,37 +1940,3 @@ const apiResData = [
         "subtype": "basic"
     }
 ];
-
-const Body = () => {
-    return(
-        <div className="body">
-            <div className="search">
-                search
-            </div>
-            <div className="res-container">
-                {
-                    apiResData.map((resCard) => (
-                        <RestaurantCard resData= {resCard}/>
-                    ))
-                }
-            </div>
-        </div>
-    );
-};
-
-const AppContainer = () => {
-    return(
-        <div className="app-container">
-            <div className="header">
-                <Header/>    
-            </div>
-            <div className="body">
-                <Body/>    
-            </div>    
-        </div>
-        
-    );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppContainer />);
