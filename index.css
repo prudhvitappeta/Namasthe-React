@@ -1,7 +1,7 @@
 .header-container {
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .logo {
@@ -42,4 +42,8 @@
 .res-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.reset-btn {
+    margin: 10px;
 }
