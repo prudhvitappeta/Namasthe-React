@@ -9,7 +9,7 @@ const AppContainer = () => {
             <div className="header">
                 <Header/>    
             </div>
-            <div className="body">
+            <div className="main-body">
                 <Body/>    
             </div>    
         </div>
